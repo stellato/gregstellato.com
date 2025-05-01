@@ -7,8 +7,8 @@ Built with clean HTML and hosted on Cloudflare Pages.
 - HTML5 + CSS (no frameworks)
 - Responsive, dark/light mode aware
 - Google Fonts: Poppins & Playfair Display
-- Privacy-friendly analytics via Fullres
-- No JavaScript frameworks or build tools
+- Privacy-friendly analytics via Fullres (custom event tracking and tagged links)
+- No JavaScript frameworks or build tools; minimal vanilla JS for event tracking
 - Human-friendly. LLM- and SEO-ready.
 
 ## Deployment
