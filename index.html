@@ -32,14 +32,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <!-- Fullres Analytics -->
-  <script>
-    (function(){
-      var fullres = document.createElement('script');
-      fullres.async = true;
-      fullres.src = 'https://t.fullres.net/gregstellato.js?' + (new Date() - new Date() % 43200000);
-      document.head.appendChild(fullres);
-    })();
-  </script>
+<script>
+  (function(){
+    var fullres = document.createElement('script');
+    fullres.async = true;
+    fullres.src = 'https://gregstellato.com/fullresproxy/gregstellato.js?' + (new Date() - new Date() % 43200000);
+    fullres.attributes.siteKeyOverride = '[YOUR_SITE_KEY]';
+    document.head.appendChild(fullres);
+  })();
+</script>
+
 
   <!-- Structured Data -->
   <script type="application/ld+json">
