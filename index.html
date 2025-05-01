@@ -229,23 +229,28 @@
     </p>
   </main>
 
-  <script>
+ <script>
   // Update copyright year
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // Fullres event tracking for all links with data-event attributes
-  document.querySelectorAll('[data-event]').forEach(el => {
-    el.addEventListener('click', function () {
-      const eventName = el.getAttribute('data-event');
-      if (eventName && window.fullres?.event) {
-        window.fullres.event(eventName, {
-          tagName: el.tagName,
-          href: el.getAttribute('href') || null,
-        });
-      }
+  // Attach click handlers to any element with a data-event attribute
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-event]').forEach(el => {
+      el.addEventListener('click', () => {
+        const eventKey = el.getAttribute('data-event');
+        if (eventKey) {
+          window.fullres ||= { events: [] };
+          window.fullres.events.push({
+            key: eventKey,
+            tagName: el.tagName,
+            href: el.getAttribute('href') || null
+          });
+        }
+      });
     });
   });
 </script>
+
 </body>
 </html>
 
