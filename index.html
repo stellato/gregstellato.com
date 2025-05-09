@@ -37,7 +37,7 @@
     var fullres = document.createElement('script');
     fullres.async = true;
     fullres.src = 'https://gregstellato.com/fullresproxy/gregstellato.js?' + (new Date() - new Date() % 43200000);
-    fullres.attributes.siteKeyOverride = '[YOUR_SITE_KEY]';
+    fullres.setAttribute('siteKeyOverride', 'gregstellato');
     document.head.appendChild(fullres);
   })();
 </script>
