@@ -155,7 +155,20 @@
   </style>
 </head>
 <body>
-
+<!-- 1. Load Fullres -->
+<!-- Fullres Analytics (proxy version) -->
+<script>
+  window.fullresConfig = {
+    site: 'gregstellato'
+  };
+  (function(){
+    var fullres = document.createElement('script');
+    fullres.async = true;
+    fullres.src = 'https://gregstellato.com/fullresproxy/gregstellato.js?' + (new Date() - new Date() % 43200000);
+    document.body.appendChild(fullres);
+  })();
+</script>
+  
   <main>
     <h1>greg stellato</h1>
     <p>likes bikes, skis, surfboards, and technology.</p>
@@ -223,21 +236,6 @@
   // Update copyright year
   document.getElementById('year').textContent = new Date().getFullYear();
  </script>
-
-<!-- 1. Load Fullres -->
-<!-- Fullres Analytics (proxy version) -->
-<script>
-  window.fullresConfig = {
-    site: 'gregstellato'
-  };
-  (function(){
-    var fullres = document.createElement('script');
-    fullres.async = true;
-    fullres.src = 'https://gregstellato.com/fullresproxy/gregstellato.js?' + (new Date() - new Date() % 43200000);
-    document.body.appendChild(fullres);
-  })();
-</script>
-
 
 <!-- 2. Attach data-event handlers -->
 <script>
