@@ -156,18 +156,16 @@
 </head>
 <body>
 <!-- 1. Load Fullres -->
-<!-- Fullres Analytics (proxy version) -->
+<!-- Fullres Analytics -->
 <script>
-  window.fullresConfig = {
-    site: 'gregstellato'
-  };
   (function(){
     var fullres = document.createElement('script');
     fullres.async = true;
-    fullres.src = 'https://gregstellato.com/fullresproxy/gregstellato.js?' + (new Date() - new Date() % 43200000);
-    document.body.appendChild(fullres);
+    fullres.src = 'https://t.fullres.net/gregstellato.js?'+(new Date()-new Date()%43200000);
+    document.head.appendChild(fullres);
   })();
 </script>
+
   
   <main>
     <h1>greg stellato</h1>
