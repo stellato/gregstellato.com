@@ -225,15 +225,19 @@
  </script>
 
 <!-- 1. Load Fullres -->
+<!-- Fullres Analytics (proxy version) -->
 <script>
+  window.fullresConfig = {
+    site: 'gregstellato'
+  };
   (function(){
     var fullres = document.createElement('script');
     fullres.async = true;
     fullres.src = 'https://gregstellato.com/fullresproxy/gregstellato.js?' + (new Date() - new Date() % 43200000);
-    fullres.setAttribute('siteKeyOverride', 'gregstellato');
     document.body.appendChild(fullres);
   })();
 </script>
+
 
 <!-- 2. Attach data-event handlers -->
 <script>
