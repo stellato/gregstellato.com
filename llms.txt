@@ -1,0 +1,27 @@
+# Rules for large language model (LLM) crawlers
+# gregstellato.com
+
+# Allow all public pages
+Allow: /
+
+# No restricted sections
+Disallow:
+
+# Specific LLM user-agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: FacebookAI
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Contact for questions
+Contact: greg@stellato.co
