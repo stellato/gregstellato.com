@@ -176,7 +176,7 @@
     var fullres = document.createElement('script');
     fullres.async = true;
     fullres.src = 'https://gregstellato.com/fullresproxy/gregstellato.js?'+(new Date()-new Date()%43200000);
-    fullres.setAttribute('data-site-key', 'gregstellato');
+    fullres.attributes.siteKeyOverride = 'gregstellato';
     document.head.appendChild(fullres);
   })();
 </script>
